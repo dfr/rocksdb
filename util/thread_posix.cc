@@ -9,6 +9,9 @@
 
 #include "util/thread_posix.h"
 #include <atomic>
+#ifdef OS_FREEBSD
+#include <cstdlib>
+#endif
 #include <unistd.h>
 #ifdef OS_LINUX
 #include <sys/syscall.h>
